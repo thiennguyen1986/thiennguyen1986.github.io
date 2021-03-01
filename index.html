@@ -1,44 +1,45 @@
- <html>
+<!DOCTYPE html>
+<html>
 <head>
 <style>
-.all-browsers {
-  margin: 0;
-  padding: 5px;
-  background-color: lightgray;
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
 }
 
-.all-browsers > h1, .browser {
-  margin: 10px;
-  padding: 5px;
-}
-
-.browser {
-  background: white;
-}
-
-.browser > h2, p {
-  margin: 4px;
-  font-size: 90%;
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
 }
 </style>
 </head>
 <body>
 
-<article class="all-browsers">
-  <h1>Most Popular Browsers</h1>
-  <article class="browser">
-    <h2>Google Chrome</h2>
-    <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
-  </article>
-  <article class="browser">
-    <h2>Mozilla Firefox</h2>
-    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
-  </article>
-  <article class="browser">
-    <h2>Microsoft Edge</h2>
-    <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
-  </article>
-</article>
+<h1>Grid Layout</h1>
+
+<p>This grid layout contains six columns and three rows:</p>
+
+<div class="grid-container">
+  <div class="item1">Header</div>
+  <div class="item2">Menu</div>
+  <div class="item3">Main</div>  
+  <div class="item4">Right</div>
+  <div class="item5">Footer</div>
+</div>
 
 </body>
-</html> 
+</html>
