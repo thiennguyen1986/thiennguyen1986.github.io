@@ -501,10 +501,6 @@ ul.top_icon li a {
 .right_cart_section .cart_icons {
      padding: 18px 0 0;
 }
-.last {padding-right: 0px;}
-.main-menu ul>li nth:child(7) a {
-     padding-right: 0px;
-}
 
 .right_cart_section ul li {
      float: left;
